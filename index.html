@@ -1,237 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de la Semana</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <title>Catálogo Elegante</title>
+  <link rel="stylesheet" href="ff.css" />
 </head>
 <body>
-    <h1>Menú de Jueves a Domingo</h1>
-    <div class="menu-grid">
-        
-        <!-- JUEVES -->
-        <div class="menu-day">
-            <h2>Jueves</h2>
-            <div class="meal">
-                <h3>Cena</h3>
-                <img src="img/jueves_cena.jpg" alt="Cena Jueves" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>1 taza de arroz</li>
-                        <li>1 pechuga de pollo</li>
-                        <li>1/2 cebolla</li>
-                        <li>Sal y especias al gusto</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <header class="header">
+    <img src="img/logo.png" alt="Logo OceanLux" class="logo">
+  </header>
+  
+  <div class="floating-icons">
+    <!-- Lado izquierdo -->
+    <img src="icons/anchor.png" class="icon icon-left top-left" alt="Ancla" />
+    <img src="icons/boat.png" class="icon icon-left mid-left" alt="Bote" />
+    <img src="icons/wheel.png" class="icon icon-left bottom-left" alt="Timón" />
+  
+    <!-- Lado derecho -->
+    <img src="icons/wheel.png" class="icon icon-right top-right" alt="Timón" />
+    <img src="icons/anchor.png" class="icon icon-right mid-right" alt="Ancla" />
+    <img src="icons/boat.png" class="icon icon-right bottom-right" alt="Bote" />
+  
+   
 
-        <!-- VIERNES -->
-        <div class="menu-day">
-            <h2>Viernes</h2>
-            <div class="meal">
-                <h3>Desayuno</h3>
-                <img src="img/Pan.jpg" alt="Desayuno Viernes" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>2 vigas de pan</li>
-                        <li> calton de huevo</li>
-                        <li>ajices</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Lado izquierdo -->
+    <img src="icons/anchor.png" class="icon icon-left top-left" alt="Ancla" />
+    <img src="icons/boat.png" class="icon icon-left mid-left" alt="Bote" />
+    <img src="icons/wheel.png" class="icon icon-left bottom-left" alt="Timón" />
+  
+    <!-- Lado derecho -->
+    <img src="icons/wheel.png" class="icon icon-right top-right" alt="Timón" />
+    <img src="icons/anchor.png" class="icon icon-right mid-right" alt="Ancla" />
+    <img src="icons/boat.png" class="icon icon-right bottom-right" alt="Bote" />
+  
 
-            <div class="meal">
-                <h3>Comida</h3>
-                <img src="img/Arroz-maiz.jpg" alt="Comida Viernes" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>3 tazas de arroz</li>
-                        <li>6 tazas de agua</li>
-                        <li>3 cucharadas de aceite</li>
-                        <li>1½ cucharaditas de sal</li>
-                        <li>1 lata de maíz dulce (300–400 g)</li>
-                        <li>2 dientes de ajo (opcional)</li>
-                        <li>Cilantro</li>
-                        <li>Aguacate</li>
-                        <li>1.2 kg de pollo en trozos</li>
-                        <li>1 cebolla mediana picada</li>
-                        <li>1 ají verde picado</li>
-                        <li>3 dientes de ajo machacados</li>
-                        <li>2 cucharadas de pasta de tomate</li>
-                        <li>1 cucharadita de orégano</li>
-                        <li>1½ cucharadita de sazón o 1 cubito (opcional)</li>
-                        <li>1 cucharadita de vinagre o limón</li>
-                        <li>Sal y pimienta al gusto</li>
-                        <li>2 cucharadas de aceite</li>
-                        <li>½ taza de agua</li>
-                        <li>1 Aguacate</li>
-                    </ul>
-                </div>
-            </div>
+  </div>
 
-            <div class="meal">
-                <h3>Cena</h3>
-                <img src="img/Pasta.jpg" alt="Cena Viernes" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>500 g de espaguetis</li>
-                        <li>Agua suficiente para hervir</li>
-                        <li>Sal al gusto</li>
-                        <li>2 cucharadas de mantequilla</li>
-                        <li>2 cucharadas de aceite de oliva (opcional)</li>
-                        <li>2 dientes de ajo (opcional)</li>
-                        <li>1½ tazas de crema de leche</li>
-                        <li>¾ taza de queso parmesano rallado</li>
-                        <li>Pimienta al gusto</li>
-                        <li>Perejil picado (opcional)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  
+  <main class="catalog-container">
+    <section class="catalog-card">
+      <h2 class="product-title">COCO</h2>
+      <div class="carousel">
+        <img src="img/coco-1.jpg" class="active" alt="Imagen 1" />
+        <img src="img/coco-2.jpg" alt="Imagen 2" />
+        <img src="img/coco-3.jpg" alt="Imagen 3" />
+        <img src="img/coco-4.jpg" alt="Imagen 4" />
+        <img src="img/coco-5.jpg" alt="Imagen 5" />
+        <img src="img/coco-6.jpg" alt="Imagen 6" />
+        <img src="img/coco-7.jpg" alt="Imagen 7" />
+        <img src="img/coco-8.jpg" alt="Imagen 8" />
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Elegancia, lujo y diseño exclusivo. ¡Explora este producto único!
+      </p>
+    </section>
 
-        <!-- SÁBADO -->
-        <div class="menu-day">
-            <h2>Sábado</h2>
-            <div class="meal">
-                <h3>Desayuno</h3>
-                <img src="img/panqueta.jpg" alt="Desayuno Sábado" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>2 tazas de harina de trigo</li>
-                        <li>2 cucharadas de azúcar</li>
-                        <li>1 cucharada de polvo de hornear</li>
-                        <li>½ cucharadita de sal</li>
-                        <li>2 huevos</li>
-                        <li>1¾ tazas de leche</li>
-                        <li>2 cucharadas de mantequilla derretida</li>
-                        <li>1 cucharadita de esencia de vainilla (opcional)</li>
-                        <li>sirope </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="meal">
-                <h3>Comida</h3>
-                <img src="img/Arroz-blanco.jpg" alt="Comida Sábado" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>3 tazas de arroz</li>
-                        <li>6 tazas de agua</li>
-                        <li>3 cucharadas de aceite</li>
-                        <li>1½ cucharaditas de sal</li>
-                        <li>800 g de carne molida de res</li>
-                        <li>1 cebolla mediana picada</li>
-                        <li>1 ají verde picado</li>
-                        <li>3 dientes de ajo machacados</li>
-                        <li>2 cucharadas de pasta de tomate</li>
-                        <li>1 cucharadita de orégano</li>
-                        <li>Sal y pimienta al gusto</li>
-                        <li>2 cucharadas de aceite</li>
-                        <li>Sanahoria</li>
-                        <li>1 aguacates</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="meal">
-                <h3>Cena</h3>
-                <img src="img/Mangu.jpg" alt="Cena Sábado" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>6 plátanos verdes grandes</li>
-                        <li>Agua suficiente para hervir</li>
-                        <li>4 cucharadas de mantequilla o aceite</li>
-                        <li>Sal al gusto</li>
-                        <li>1 Cebolla</li>
-                        <li>2 cucharadas de vinagre blanco o limón</li>
-                        <li>2 cucharadas de aceite</li>
-                        <li>1 pizca de sal</li>
-                        <li>Salami</li>
-                        <li>Huevo</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- DOMINGO -->
-        <div class="menu-day">
-            <h2>Domingo</h2>
-            <div class="meal">
-                <h3>Desayuno</h3>
-                <img src="img/Pan-Chocolate.jpg" alt="Desayuno Domingo" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>Pan </li>
-                        <li>Chocolate derretido</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="meal">
-                <h3>Comida</h3>
-                <img src="img/domingo_comida.jpg" alt="Comida Domingo" onclick="toggleIngredients(this)">
-                <div class="ingredients">
-                    <strong>Ingredientes:</strong>
-                    <ul>
-                        <li>Carne guisada</li>
-                        <li>Arroz con habichuelas</li>
-                        <li>Ensalada</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="menu-day" style="margin-top: 40px;">
-        <h2>🛒 Lista de Compras Final</h2>
-        <ul class="shopping-list">
-            <li>4 aguacates</li>
-            <li>5 ajíes verdes</li>
-            <li>5 ajíes rojos</li>
-            <li>4 cebollas</li>
-            <li>6 tabletas de chocolate</li>
-            <li>1 paquete de cilantro</li>
-            <li>1 galón mediano de aceite verde</li>
-            <li>1 saco de azúcar</li>
-            <li>1 mantequilla</li>
-            <li>2 paquetes de pasta</li>
-            <li>1 pote de sal</li>
-            <li>1 ajo entero</li>
-            <li>1 cartón de huevos</li>
-            <li>6 plátanos verdes</li>
-            <li>1 salami</li>
-            <li>1 saco de arroz mediano</li>
-            <li>2 leche normal</li>
-            <li>1 leche carnecion de queso</li>
-            <li>3 leche carnecion normal</li>
-            <li>2 vigas de pan</li>
-            <li>1 paquete de carne molida</li>
-            <li>2 Paquetes de carne</li>
-            <li>3 Tuna de agua</li>
-            <li>1 Tortilla</li>
-            <h2>Pendiente</h2>
-            <li>Agua</li>
-            <li>Refresco</li>
-            <li>Picadera</li>
-        </ul>
-    </div>
+    <section class="catalog-card">
+      <h2 class="product-title">SOFI</h2>
+      <div class="carousel">
+        <img src="img/f-2.jpg" class="active" alt="Imagen 1" />
+        <img src="img/f-3.jpg" alt="Imagen 2" />
+        <img src="img/f-4.jpg" alt="Imagen 3" />
+        <img src="img/f-5.jpg" alt="Imagen 4" />
+        <img src="img/f-1.jpg" alt="Imagen 5" />
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Diseño sofisticado con toques dorados para un estilo real.
+      </p>
+    </section>
     
+    <section class="catalog-card">
+      <h2 class="product-title">MIA</h2>
+      <div class="carousel">
+        <img src="img/mia7.jpg" class="active" alt="Imagen 1" />
+        <img src="img/mia5.jpg" alt="Imagen 2" />
+        <img src="img/mia3.jpg" alt="Imagen 3" />
+        <img src="img/mia4.jpg" alt="Imagen 2" />
+        <img src="img/mia6.jpg" alt="Imagen 2" />
+        <img src="img/mia1.jpg" alt="Imagen 2" />
+        <img src="img/mia2.jpg" alt="Imagen 2" />
+        <video src="video/mia-vid.mp4" muted loop controls></video>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Diseño sofisticado con toques dorados para un estilo real.
+      </p>
+    </section>
 
-    <script>
-        function toggleIngredients(img) {
-            const ingredientsDiv = img.nextElementSibling;
-            ingredientsDiv.style.display = ingredientsDiv.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+    <section class="catalog-card">
+      <h2 class="product-title">LIA-U</h2>
+      <div class="carousel">
+        <img src="img/lia-u.jpg" class="active" alt="Imagen 1" />
+        <img src="img/lia-u2.jpg" alt="Imagen 2" />
+        <img src="img/lia-u3.jpg" alt="Imagen 3" />
+        <img src="img/lia-u1.jpg" alt="Imagen 3" />
+        <video src="video/lia-vid-u1.mp4" muted loop controls></video>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Diseño sofisticado con toques dorados para un estilo real.
+      </p>
+    </section>
+
+    <section class="catalog-card">
+      <h2 class="product-title">ROJO</h2>
+      <div class="carousel">
+        <img src="img/t-1.jpg" class="active" alt="Imagen 1" />
+        <img src="img/t-2.jpg" alt="Imagen 2" />
+        <img src="img/t-3.jpg" alt="Imagen 3" />
+        <img src="img/t-4.jpg" alt="Imagen 3" />
+        <img src="img/t-5.jpg" alt="Imagen 3" />
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Diseño sofisticado con toques dorados para un estilo real.
+      </p>
+    </section>
+
+    <section class="catalog-card">
+      <h2 class="product-title">LUZ</h2>
+      <div class="carousel">
+        <img src="img/luz1.jpg" class="active" alt="Imagen 1" />
+        <video src="video/luz-vid.mp4" muted loop controls></video>
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <p class="product-description">
+        Diseño sofisticado con toques dorados para un estilo real.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="carousel.js"></script>
 </body>
 </html>
