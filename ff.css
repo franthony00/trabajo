@@ -1,10 +1,12 @@
+/* Logo superior */
 .logo {
-  width: 200px;         /* Ajusta según el tamaño deseado */
+  width: 200px;
   height: auto;
   display: block;
-  margin: 0 auto 10px auto; /* Centrado con espacio inferior */
+  margin: 0 auto 10px auto;
 }
 
+/* Estilos generales del cuerpo */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -12,6 +14,7 @@ body {
   color: #333;
 }
 
+/* Encabezado superior */
 .header {
   background-color: #fff;
   color: #cfa935;
@@ -21,14 +24,16 @@ body {
   border-bottom: 2px solid #cfa935;
 }
 
+/* Contenedor principal del catálogo */
 .catalog-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  gap: 2rem; /* espacio entre tarjetas */
+  gap: 2rem;
 }
 
+/* Tarjeta de producto */
 .catalog-card {
   background: white;
   border: 1px solid #cfa935;
@@ -40,12 +45,14 @@ body {
   text-align: center;
 }
 
+/* Título del producto */
 .product-title {
   color: #008ccf;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
+/* Lista de detalles del producto */
 .product-info {
   list-style-type: disc;
   padding-left: 20px;
@@ -57,9 +64,9 @@ body {
 
 .product-info li {
   margin-bottom: 5px;
- 
 }
 
+/* Carrusel de imágenes y videos */
 .carousel {
   position: relative;
   width: 100%;
@@ -69,14 +76,219 @@ body {
   margin: 0 auto;
 }
 
-.carousel img {
+.carousel img,
+.video-wrapper {
   width: 100%;
   height: 300px;
   object-fit: cover;
   display: none;
+  border-radius: 10px;
 }
 
-/* Modal de video ampliado */
+/* Mostrar solo el slide activo */
+.carousel img.active,
+.video-wrapper.active {
+  display: block;
+}
+
+/* Botones de navegación en carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #cfa935;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Íconos decorativos flotantes */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-icons .icon {
+  position: absolute;
+  opacity: 0.07;
+  width: 80px;
+  height: auto;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #cfa935);
+}
+
+/* Posiciones de íconos decorativos */
+.top-left { top: 10%; left: 20px; }
+.mid-left { top: 40%; left: 30px; }
+.bottom-left { bottom: 15%; left: 40px; }
+.top-right { top: 15%; right: 20px; }
+.mid-right { top: 45%; right: 30px; }
+.bottom-right { bottom: 20%; right: 40px; }
+
+/* Ícono decorativo que flota suavemente */
+.icon-float {
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatIcon 12s infinite ease-in-out;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+}
+
+/* FOOTER */
+.page-footer {
+  background-color: #fdfdfd;
+  border-top: 2px solid #cfa935;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Estructura del contenido del footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Redes sociales */
+.social-links img {
+  width: 40px;
+  margin: 0 10px;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Texto sobre redes sociales */
+.social-instruction {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #008ccf;
+  text-align: center;
+}
+
+/* Sección "Incluye" y "A parte" */
+.footer-content .item-details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+}
+
+.item-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.included-items, .apart-items {
+  text-align: left;
+  min-width: 200px;
+}
+
+.apart-items h3,
+.included-items h3 {
+  color: #008ccf;
+  margin-bottom: 0.5rem;
+}
+
+.included-items ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.included-items li {
+  margin-bottom: 5px;
+}
+
+.apart-text {
+  padding-left: 20px;
+  color: #444;
+  margin: 0;
+}
+
+/* ===============================
+   VIDEO CON PLAY ICON OVERLAY
+   =============================== */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: none; /* como imagen por defecto */
+}
+
+.video-wrapper.active {
+  display: block;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Ícono de Play centrado sobre el video */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px #000;
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 2;
+}
+
+/* ===============================
+   MODAL DE VIDEO AMPLIADO
+   =============================== */
+
 .video-modal {
   position: fixed;
   top: 0;
@@ -104,147 +316,4 @@ body {
   font-size: 2.5rem;
   color: white;
   cursor: pointer;
-}
-
-
-.carousel video.active {
-  display: block;
-}
-
-
-.carousel img.active {
-  display: block;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #cfa935;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-.carousel-btn:hover {
-  opacity: 1;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.floating-icons {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.floating-icons .icon {
-  position: absolute;
-  opacity: 0.07;
-  width: 80px;
-  height: auto;
-  user-select: none;
-  filter: drop-shadow(0 0 2px #cfa935);
-}
-
-/* Posiciones lado izquierdo */
-.top-left {
-  top: 10%;
-  left: 20px;
-}
-.mid-left {
-  top: 40%;
-  left: 30px;
-}
-.bottom-left {
-  bottom: 15%;
-  left: 40px;
-}
-
-/* Posiciones lado derecho */
-.top-right {
-  top: 15%;
-  right: 20px;
-}
-.mid-right {
-  top: 45%;
-  right: 30px;
-}
-.bottom-right {
-  bottom: 20%;
-  right: 40px;
-}
-
-/* Ícono flotante centro */
-.icon-float {
-  top: 75%;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: floatIcon 12s infinite ease-in-out;
-}
-
-@keyframes floatIcon {
-  0%, 100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -20px);
-  }
-}
-
-.page-footer {
-  background-color: #fdfdfd;
-  border-top: 2px solid #cfa935;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.social-links img {
-  width: 40px;
-  margin: 0 10px;
-  opacity: 0.85;
-  transition: transform 0.3s ease;
-}
-
-.social-links img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-.included-items h3 {
-  margin-bottom: 0.5rem;
-  color: #008ccf;
-}
-
-.included-items ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  text-align: left;
-  color: #444;
-}
-
-.included-items li {
-  margin-bottom: 5px;
 }
