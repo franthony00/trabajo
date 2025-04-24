@@ -1,24 +1,25 @@
 const carousels = document.querySelectorAll(".carousel");
 
 carousels.forEach((carousel) => {
-  const slides = carousel.querySelectorAll("img, video");
+  // Selecciona imágenes y videos envueltos en .video-wrapper
+  const slides = carousel.querySelectorAll("img, .video-wrapper");
   const prevBtn = carousel.querySelector(".prev");
   const nextBtn = carousel.querySelector(".next");
   let index = 0;
 
   function showSlide(i) {
-    slides.forEach((el) => el.classList.remove("active"));
-    slides[i].classList.add("active");
+    slides.forEach((el) => {
+      el.classList.remove("active");
 
-    // Pausar cualquier video fuera del slide activo
-    slides.forEach((el, idx) => {
-      if (el.tagName === "VIDEO") {
-        if (idx !== i) {
-          el.pause();
-          el.currentTime = 0;
-        }
+      // Pausar cualquier video dentro de la tarjeta si no es el activo
+      const video = el.querySelector("video");
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
       }
     });
+
+    slides[i].classList.add("active");
   }
 
   prevBtn.addEventListener("click", () => {
@@ -30,6 +31,9 @@ carousels.forEach((carousel) => {
     index = (index + 1) % slides.length;
     showSlide(index);
   });
+
+  // Inicializar primer slide como activo
+  showSlide(index);
 });
 
 // =======================
@@ -47,7 +51,7 @@ const modalVideo = modal.querySelector("video");
 const closeBtn = modal.querySelector(".close-modal");
 
 // Al hacer clic en un video dentro del carrusel
-document.querySelectorAll(".carousel video").forEach((video) => {
+document.querySelectorAll(".video-wrapper video").forEach((video) => {
   video.addEventListener("click", (e) => {
     e.preventDefault();
     modalVideo.src = video.currentSrc || video.src;
