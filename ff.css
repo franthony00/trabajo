@@ -1,12 +1,6 @@
-/* Logo superior */
-.logo {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
-}
-
-/* Estilos generales del cuerpo */
+/* =======================
+   Estilos base generales
+========================== */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -14,7 +8,12 @@ body {
   color: #333;
 }
 
-/* Encabezado superior */
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
 .header {
   background-color: #fff;
   color: #cfa935;
@@ -24,56 +23,58 @@ body {
   border-bottom: 2px solid #cfa935;
 }
 
-/* Contenedor principal del catálogo */
-.catalog-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+/* =======================
+   Contenedor GRID
+========================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   gap: 2rem;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
-/* Tarjeta de producto */
 .catalog-card {
   background: white;
   border: 1px solid #cfa935;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 90%;
   padding: 2rem;
+  max-width: 400px;
+  width: 100%;
   text-align: center;
 }
 
-/* Título del producto */
 .product-title {
   color: #008ccf;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-/* Lista de detalles del producto */
 .product-info {
   list-style-type: disc;
   padding-left: 20px;
   margin-top: 1rem;
-  text-align: center;
   color: #444;
-  font-size: 1rem;
+  text-align: left;
 }
 
 .product-info li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
-/* Carrusel de imágenes y videos */
+/* =======================
+   Carrusel de imágenes
+========================== */
 .carousel {
   position: relative;
   width: 100%;
   height: 300px;
   overflow: hidden;
   border-radius: 10px;
-  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .carousel img,
@@ -85,13 +86,11 @@ body {
   border-radius: 10px;
 }
 
-/* Mostrar solo el slide activo */
 .carousel img.active,
 .video-wrapper.active {
   display: block;
 }
 
-/* Botones de navegación en carrusel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -110,15 +109,27 @@ body {
   opacity: 1;
 }
 
-.prev {
-  left: 10px;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* =======================
+   Botón Ver Reseñas
+========================== */
+.toggle-reviews {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0f8bf9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.next {
-  right: 10px;
+.toggle-reviews:hover {
+  background-color: #d9b800;
 }
 
-/* Íconos decorativos flotantes */
 .floating-icons {
   position: fixed;
   top: 0;
@@ -138,41 +149,25 @@ body {
   filter: drop-shadow(0 0 2px #cfa935);
 }
 
-/* Posiciones de íconos decorativos */
-.top-left { top: 10%; left: 20px; }
-.mid-left { top: 40%; left: 30px; }
-.bottom-left { bottom: 15%; left: 40px; }
-.top-right { top: 15%; right: 20px; }
-.mid-right { top: 45%; right: 30px; }
-.bottom-right { bottom: 20%; right: 40px; }
+/* Posiciones específicas */
+.top-left { top: 5%; left: 10px; }
+.mid-left { top: 40%; left: 15px; }
+.bottom-left { bottom: 10%; left: 20px; }
 
-/* Ícono decorativo que flota suavemente */
-.icon-float {
-  top: 75%;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: floatIcon 12s infinite ease-in-out;
-}
+.top-right { top: 10%; right: 10px; }
+.mid-right { top: 45%; right: 15px; }
+.bottom-right { bottom: 15%; right: 20px; }
 
-@keyframes floatIcon {
-  0%, 100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -20px);
-  }
-}
-
-/* FOOTER */
 .page-footer {
-  background-color: #fdfdfd;
+  background-color: #eaf9ff;
   border-top: 2px solid #cfa935;
   padding: 2rem 1rem;
   text-align: center;
   margin-top: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Estructura del contenido del footer */
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -180,44 +175,33 @@ body {
   gap: 2rem;
 }
 
-/* Redes sociales */
+/* WhatsApp */
 .social-links img {
-  width: 40px;
-  margin: 0 10px;
-  opacity: 0.85;
+  width: 45px;
+  opacity: 0.95;
   transition: transform 0.3s ease;
 }
 
 .social-links img:hover {
   transform: scale(1.1);
-  opacity: 1;
 }
 
-/* Texto sobre redes sociales */
 .social-instruction {
   font-weight: bold;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
   color: #008ccf;
-  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-/* Sección "Incluye" y "A parte" */
-.footer-content .item-details {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 600px;
-}
-
+/* Incluye y A parte */
 .item-details {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
 }
 
 .included-items, .apart-items {
@@ -225,8 +209,8 @@ body {
   min-width: 200px;
 }
 
-.apart-items h3,
-.included-items h3 {
+.included-items h3,
+.apart-items h3 {
   color: #008ccf;
   margin-bottom: 0.5rem;
 }
@@ -235,85 +219,40 @@ body {
   list-style-type: disc;
   padding-left: 20px;
   color: #444;
-}
-
-.included-items li {
-  margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 .apart-text {
   padding-left: 20px;
   color: #444;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0.2rem 0;
 }
-
-/* ===============================
-   VIDEO CON PLAY ICON OVERLAY
-   =============================== */
 
 .video-wrapper {
   position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px;
-  display: none; /* como imagen por defecto */
 }
 
-.video-wrapper.active {
-  display: block;
-}
-
-.video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Ícono de Play centrado sobre el video */
-.play-icon {
+.play-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
-  text-shadow: 0 0 10px #000;
-  pointer-events: none;
-  opacity: 0.85;
+  text-shadow: 0 0 10px black;
+  opacity: 0.9;
   z-index: 2;
-}
-
-/* ===============================
-   MODAL DE VIDEO AMPLIADO
-   =============================== */
-
-.video-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-}
-
-.video-modal video {
-  width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.video-modal .close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2.5rem;
-  color: white;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
+  pointer-events: auto;
 }
+
+.video-wrapper.playing .play-overlay {
+  display: none;
+}
+

@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
+  <link rel="icon" type="img/png" href="img/favicon.png">
   <title>OceanLux 🚤</title>
   <link rel="stylesheet" href="ff.css" />
+  <!-- Tailwind CSS y Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <header class="header">
     <img src="img/logo.png" alt="Logo OceanLux" class="logo">
+    <button onclick="showReviewPage()" class="bg-[#0f8bf9] text-white px-4 py-2 rounded-lg hover:bg-[#d9b800] transition">
+      Dejar Reseña
+    </button>
   </header>
+
   
   <div class="floating-icons">
     <!-- Lado izquierdo -->
@@ -39,8 +46,11 @@
   </div>
 
   
-  <main class="catalog-container">
-    <section class="catalog-card">
+<main class="p-6">
+  <div class="grid-container">
+
+    <!-- COCO-1 -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">COCO-1</h2>
       <div class="carousel">
         <img src="img/coco-1.jpg" class="active" alt="Imagen 1" />
@@ -60,9 +70,14 @@
         <li>Capacidad: 15-20 personas</li>
         <li>Muelle Whala</li>
       </ul>
+      <div class="reviews-container" data-boat="COCO-1"></div>
+      <button class="toggle-reviews bg-blue-500 text-white px-2 py-1 rounded mt-2">Ver reseñas</button>
+<div class="hidden reviews-list mt-2" data-boat="COCO-1"></div>
+
     </section>
 
-    <section class="catalog-card">
+    <!-- SOFI -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">SOFI</h2>
       <div class="carousel">
         <img src="img/f-2.jpg" class="active" alt="Imagen 1" />
@@ -79,21 +94,25 @@
         <li>Capacidad: 8 personas</li>
         <li>Muelle Zar par</li>
       </ul>
+      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
+      <div class="reviews-list hidden mt-2" data-boat="SOFI"></div>
     </section>
-    
-    <section class="catalog-card">
+
+    <!-- MIA -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">MIA</h2>
       <div class="carousel">
         <img src="img/mia7.jpg" class="active" alt="Imagen 1" />
         <img src="img/mia5.jpg" alt="Imagen 2" />
         <img src="img/mia3.jpg" alt="Imagen 3" />
-        <img src="img/mia4.jpg" alt="Imagen 2" />
-        <img src="img/mia6.jpg" alt="Imagen 2" />
-        <img src="img/mia1.jpg" alt="Imagen 2" />
-        <img src="img/mia2.jpg" alt="Imagen 2" />
+        <img src="img/mia4.jpg" alt="Imagen 4" />
+        <img src="img/mia6.jpg" alt="Imagen 5" />
+        <img src="img/mia1.jpg" alt="Imagen 6" />
+        <img src="img/mia2.jpg" alt="Imagen 7" />
         <div class="video-wrapper">
-        <video src="video/mia-vid.mp4" muted loop controls></video>
-      </div>
+          <video src="video/mia-vid.mp4" muted loop controls></video>
+          <div class="play-icon">&#9658;</div>
+        </div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -103,18 +122,22 @@
         <li>Capacidad: 20 personas</li>
         <li>Muelle Zar par</li>
       </ul>
+      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
+      <div class="reviews-list hidden mt-2" data-boat="MIA"></div>
     </section>
 
-    <section class="catalog-card">
+    <!-- LIA-U -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">LIA-U</h2>
       <div class="carousel">
         <img src="img/lia-u.jpg" class="active" alt="Imagen 1" />
         <img src="img/lia-u2.jpg" alt="Imagen 2" />
         <img src="img/lia-u3.jpg" alt="Imagen 3" />
-        <img src="img/lia-u1.jpg" alt="Imagen 3" />
+        <img src="img/lia-u1.jpg" alt="Imagen 4" />
         <div class="video-wrapper">
-        <video src="video/lia-vid-u1.mp4" muted loop controls></video>
-      </div>
+          <video src="video/lia-vid-u1.mp4" muted loop controls></video>
+          <div class="play-icon">&#9658;</div>
+        </div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -124,16 +147,19 @@
         <li>Capacidad: 10-12 personas</li>
         <li>Muelle Zar par</li>
       </ul>
+      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
+      <div class="reviews-list hidden mt-2" data-boat="LIA-U"></div>
     </section>
 
-    <section class="catalog-card">
+    <!-- ROJO -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">ROJO</h2>
       <div class="carousel">
         <img src="img/t-1.jpg" class="active" alt="Imagen 1" />
         <img src="img/t-2.jpg" alt="Imagen 2" />
         <img src="img/t-3.jpg" alt="Imagen 3" />
-        <img src="img/t-4.jpg" alt="Imagen 3" />
-        <img src="img/t-5.jpg" alt="Imagen 3" />
+        <img src="img/t-4.jpg" alt="Imagen 4" />
+        <img src="img/t-5.jpg" alt="Imagen 5" />
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -143,27 +169,12 @@
         <li>Capacidad: 12 personas</li>
         <li>Muelle Zar par</li>
       </ul>
+      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
+      <div class="reviews-list hidden mt-2" data-boat="ROJO"></div>
     </section>
 
-    <section class="catalog-card">
-      <h2 class="product-title">LUZ Marina</h2>
-      <div class="carousel">
-        <img src="img/luz1.jpg" class="active" alt="Imagen 1" />
-        <div class="video-wrapper">
-        <video src="video/luz-vid.mp4" muted loop controls></video>
-        </div>
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
-      </div>
-      <ul class="product-info">
-        <li>Precio: US $850.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 15-20 personas</li>
-        <li>Muelle Whala</li>
-      </ul>
-    </section>
-
-    <section class="catalog-card">
+    <!-- IGUAL QUE TU -->
+    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
       <h2 class="product-title">IGUAL QUE TU</h2>
       <div class="carousel">
         <img src="img/green.jpg" class="active" alt="Imagen 1" />
@@ -173,10 +184,12 @@
         <img src="img/green3.jpg" alt="Imagen 5" />
         <img src="img/green4.jpg" alt="Imagen 6" />
         <img src="img/green5.jpg" alt="Imagen 7" />
-             <div class="video-wrapper">
-               <video src="video/green.mp4" muted loop controls></video>
-               <div class="play-icon">&#9658;</div>
-            </div>
+
+       <div class="video-wrapper">
+        <video src="video/green.mp4" controls></video>
+        <div class="play-overlay">&#9658;</div>
+       </div>
+
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -184,12 +197,15 @@
         <li>Precio: US $800.00</li>
         <li>5 Horas de uso</li>
         <li>Capacidad: 18-20 personas</li>
-        
         <li>Muelle Whala</li>
       </ul>
+      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
+      <div class="reviews-list hidden mt-2" data-boat="IGUAL QUE TU"></div>
     </section>
 
-  </main>
+  </div>
+</main>
+
 
   <footer class="page-footer">
     <div class="footer-content">
@@ -223,8 +239,84 @@
     </div>
   </footer>
   
-  
+  <!-- FORMULARIO DE RESEÑAS -->
+<div id="review-page" class="hidden fixed inset-0 bg-[#80f7f7] overflow-y-auto py-12 z-50">
+  <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+    <div class="p-8">
+      <button onclick="showMainPage()" class="mb-6 text-gray-600 hover:text-[#21c6ba] transition">
+        <i class="fas fa-arrow-left mr-2"></i> Volver
+      </button>
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Deja tu reseña</h2>
+      <p class="text-gray-600 mb-8">Comparte tu experiencia con OceanLux y ayuda a otros clientes a elegir la mejor embarcación.</p>
 
-  <script src="carousel.js"></script>
-</body>
+      <form id="review-form" class="space-y-6">
+        <div>
+          <label for="boat-select" class="block text-gray-700 font-medium mb-2">Selecciona la embarcación</label>
+          <select id="boat-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+            <option value="" disabled selected>Elige una opción</option>
+            <option value="COCO-1">COCO-1</option>
+            <option value="SOFI">SOFI</option>
+            <option value="MIA">MIA</option>
+            <option value="LIA-U">LIA-U</option>
+            <option value="ROJO">ROJO</option>
+            <option value="IGUAL QUE TU">IGUAL QUE TU</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">Calificación</label>
+          <div class="flex space-x-2" id="star-rating">
+            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="1"></i>
+            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="2"></i>
+            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="3"></i>
+            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="4"></i>
+            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="5"></i>
+          </div>
+          <input type="hidden" id="rating-value" required>
+        </div>
+
+        <div>
+          <label for="review-text" class="block text-gray-700 font-medium mb-2">Tu reseña</label>
+          <textarea id="review-text" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Describe tu experiencia..." required></textarea>
+        </div>
+
+        <div>
+          <label for="reviewer-name" class="block text-gray-700 font-medium mb-2">Tu nombre</label>
+          <input type="text" id="reviewer-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Nombre" required>
+        </div>
+
+        <button type="submit" class="w-full bg-[#0f8bf9] text-white py-3 rounded-lg font-bold hover:bg-[#d9b800] transition flex items-center justify-center">
+          <i class="fas fa-paper-plane mr-2"></i> Enviar Reseña
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ SDKs DE FIREBASE - SIEMPRE VAN ANTES DE TUS SCRIPTS -->
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDyiV4ify72VG_MKPIzK_0aKQP2qeByasY",
+    authDomain: "oceandelux-aaeab.firebaseapp.com",
+    databaseURL: "https://oceandelux-aaeab-default-rtdb.firebaseio.com",
+    projectId: "oceandelux-aaeab",
+    storageBucket: "oceandelux-aaeab.appspot.com",
+    messagingSenderId: "837708528184",
+    appId: "1:837708528184:web:6b4da1a34fedc986dc84cd",
+    measurementId: "G-07YN71N7NB"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
+
+<!-- TUS SCRIPTS VAN DESPUÉS DE INICIALIZAR FIREBASE -->
+<script src="carousel.js"></script>
+<script src="main.js"></script>
+
+
+ 
 </html>
+<input type="hidden" id="rating-value" required>
