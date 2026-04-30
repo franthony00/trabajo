@@ -3,320 +3,397 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="img/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <title>OceanLux 🚤</title>
-  <link rel="stylesheet" href="ff.css" />
-  <!-- Tailwind CSS y Font Awesome -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="ff.css" />
 </head>
 <body>
-  <header class="header">
-    <img src="img/logo.png" alt="Logo OceanLux" class="logo">
-    <button onclick="showReviewPage()" class="bg-[#0f8bf9] text-white px-4 py-2 rounded-lg hover:bg-[#d9b800] transition">
-      Dejar Reseña
-    </button>
-  </header>
 
-  
-  <div class="floating-icons">
-    <!-- Lado izquierdo -->
-    <img src="icons/anchor.png" class="icon icon-left top-left" alt="Ancla" />
-    <img src="icons/boat.png" class="icon icon-left mid-left" alt="Bote" />
-    <img src="icons/wheel.png" class="icon icon-left bottom-left" alt="Timón" />
-  
-    <!-- Lado derecho -->
-    <img src="icons/wheel.png" class="icon icon-right top-right" alt="Timón" />
-    <img src="icons/anchor.png" class="icon icon-right mid-right" alt="Ancla" />
-    <img src="icons/boat.png" class="icon icon-right bottom-right" alt="Bote" />
-  
-   
+<!-- Íconos decorativos de fondo -->
+<div class="floating-icons">
+  <img src="icons/anchor.png" class="icon top-left"     alt="" />
+  <img src="icons/boat.png"   class="icon mid-left"     alt="" />
+  <img src="icons/wheel.png"  class="icon bottom-left"  alt="" />
+  <img src="icons/wheel.png"  class="icon top-right"    alt="" />
+  <img src="icons/anchor.png" class="icon mid-right"    alt="" />
+  <img src="icons/boat.png"   class="icon bottom-right" alt="" />
+</div>
 
-    <!-- Lado izquierdo -->
-    <img src="icons/anchor.png" class="icon icon-left top-left" alt="Ancla" />
-    <img src="icons/boat.png" class="icon icon-left mid-left" alt="Bote" />
-    <img src="icons/wheel.png" class="icon icon-left bottom-left" alt="Timón" />
-  
-    <!-- Lado derecho -->
-    <img src="icons/wheel.png" class="icon icon-right top-right" alt="Timón" />
-    <img src="icons/anchor.png" class="icon icon-right mid-right" alt="Ancla" />
-    <img src="icons/boat.png" class="icon icon-right bottom-right" alt="Bote" />
-  
+<!-- HEADER -->
+<header class="header">
+  <div class="brand">
+    <img src="img/logo.png" alt="OceanLux logo" class="logo">
+    <div class="brand-text">
+      <h1 class="brand-name">OCEANLUX</h1>
+      <span class="brand-tagline">Experiencias náuticas premium</span>
+    </div>
+  </div>
+  <button onclick="openReviewForm()" class="btn-review">
+    <i class="fas fa-star"></i> Dejar Reseña
+  </button>
+</header>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Boca Chica · República Dominicana</div>
+  <h1>Vive el <span class="accent">mar</span> a tu manera</h1>
+  <p class="hero-sub">
+    Alquila la embarcación perfecta para tu grupo. Experiencias únicas con servicio premium en las mejores aguas del Caribe.
+  </p>
+  <a href="#catalogo" class="btn-hero">
+    Ver embarcaciones <i class="fas fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- CATÁLOGO -->
+<main class="catalog-section" id="catalogo">
+  <div class="catalog-header">
+    <h2>Nuestras <span>Embarcaciones</span></h2>
+    <p>6 opciones disponibles · Reserva por WhatsApp</p>
   </div>
 
-  
-<main class="p-6">
   <div class="grid-container">
 
     <!-- COCO-1 -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">COCO-1</h2>
+    <section class="catalog-card" data-boat-id="coco-1" data-boat-name="COCO-1">
+      <div class="card-header">
+        <h2 class="product-title">COCO-1</h2>
+        <span class="boat-price">US $850</span>
+      </div>
       <div class="carousel">
-        <img src="img/coco-1.jpg" class="active" alt="Imagen 1" />
-        <img src="img/coco-2.jpg" alt="Imagen 2" />
-        <img src="img/coco-3.jpg" alt="Imagen 3" />
-        <img src="img/coco-4.jpg" alt="Imagen 4" />
-        <img src="img/coco-5.jpg" alt="Imagen 5" />
-        <img src="img/coco-6.jpg" alt="Imagen 6" />
-        <img src="img/coco-7.jpg" alt="Imagen 7" />
-        <img src="img/coco-8.jpg" alt="Imagen 8" />
+        <img src="img/coco-1.jpg" class="active" alt="COCO-1" />
+        <img src="img/coco-2.jpg" alt="COCO-1" />
+        <img src="img/coco-3.jpg" alt="COCO-1" />
+        <img src="img/coco-4.jpg" alt="COCO-1" />
+        <img src="img/coco-5.jpg" alt="COCO-1" />
+        <img src="img/coco-6.jpg" alt="COCO-1" />
+        <img src="img/coco-7.jpg" alt="COCO-1" />
+        <img src="img/coco-8.jpg" alt="COCO-1" />
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $850.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 15-20 personas</li>
-        <li>Muelle Whala</li>
-      </ul>
-      <div class="reviews-container" data-boat="COCO-1"></div>
-      <button class="toggle-reviews bg-blue-500 text-white px-2 py-1 rounded mt-2">Ver reseñas</button>
-<div class="hidden reviews-list mt-2" data-boat="COCO-1"></div>
-
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 6 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 15 – 20 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Whala</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20COCO-1" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="coco-1" data-boat-name="COCO-1">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- SOFI -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">SOFI</h2>
+    <section class="catalog-card" data-boat-id="sofi" data-boat-name="SOFI">
+      <div class="card-header">
+        <h2 class="product-title">SOFI</h2>
+        <span class="boat-price">US $600</span>
+      </div>
       <div class="carousel">
-        <img src="img/f-2.jpg" class="active" alt="Imagen 1" />
-        <img src="img/f-3.jpg" alt="Imagen 2" />
-        <img src="img/f-4.jpg" alt="Imagen 3" />
-        <img src="img/f-5.jpg" alt="Imagen 4" />
-        <img src="img/f-1.jpg" alt="Imagen 5" />
+        <img src="img/f-2.jpg" class="active" alt="SOFI" />
+        <img src="img/f-3.jpg" alt="SOFI" />
+        <img src="img/f-4.jpg" alt="SOFI" />
+        <img src="img/f-5.jpg" alt="SOFI" />
+        <img src="img/f-1.jpg" alt="SOFI" />
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $600.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 8 personas</li>
-        <li>Muelle Zar par</li>
-      </ul>
-      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
-      <div class="reviews-list hidden mt-2" data-boat="SOFI"></div>
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 6 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 8 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Zar par</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20SOFI" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="sofi" data-boat-name="SOFI">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- MIA -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">MIA</h2>
+    <section class="catalog-card" data-boat-id="mia" data-boat-name="MIA">
+      <div class="card-header">
+        <h2 class="product-title">MIA</h2>
+        <span class="boat-price">US $1,000</span>
+      </div>
       <div class="carousel">
-        <img src="img/mia7.jpg" class="active" alt="Imagen 1" />
-        <img src="img/mia5.jpg" alt="Imagen 2" />
-        <img src="img/mia3.jpg" alt="Imagen 3" />
-        <img src="img/mia4.jpg" alt="Imagen 4" />
-        <img src="img/mia6.jpg" alt="Imagen 5" />
-        <img src="img/mia1.jpg" alt="Imagen 6" />
-        <img src="img/mia2.jpg" alt="Imagen 7" />
+        <img src="img/mia7.jpg" class="active" alt="MIA" />
+        <img src="img/mia5.jpg" alt="MIA" />
+        <img src="img/mia3.jpg" alt="MIA" />
+        <img src="img/mia4.jpg" alt="MIA" />
+        <img src="img/mia6.jpg" alt="MIA" />
+        <img src="img/mia1.jpg" alt="MIA" />
+        <img src="img/mia2.jpg" alt="MIA" />
         <div class="video-wrapper">
-          <video src="video/mia-vid.mp4" muted loop controls></video>
-          <div class="play-icon">&#9658;</div>
+          <video src="video/mia-vid.mp4" muted loop></video>
+          <div class="play-overlay">&#9658;</div>
         </div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $1,000.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 20 personas</li>
-        <li>Muelle Zar par</li>
-      </ul>
-      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
-      <div class="reviews-list hidden mt-2" data-boat="MIA"></div>
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 6 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 20 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Zar par</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20MIA" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="mia" data-boat-name="MIA">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- LIA-U -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">LIA-U</h2>
+    <section class="catalog-card" data-boat-id="lia-u" data-boat-name="LIA-U">
+      <div class="card-header">
+        <h2 class="product-title">LIA-U</h2>
+        <span class="boat-price">US $650</span>
+      </div>
       <div class="carousel">
-        <img src="img/lia-u.jpg" class="active" alt="Imagen 1" />
-        <img src="img/lia-u2.jpg" alt="Imagen 2" />
-        <img src="img/lia-u3.jpg" alt="Imagen 3" />
-        <img src="img/lia-u1.jpg" alt="Imagen 4" />
+        <img src="img/lia-u.jpg" class="active" alt="LIA-U" />
+        <img src="img/lia-u2.jpg" alt="LIA-U" />
+        <img src="img/lia-u3.jpg" alt="LIA-U" />
+        <img src="img/lia-u1.jpg" alt="LIA-U" />
         <div class="video-wrapper">
-          <video src="video/lia-vid-u1.mp4" muted loop controls></video>
-          <div class="play-icon">&#9658;</div>
+          <video src="video/lia-vid-u1.mp4" muted loop></video>
+          <div class="play-overlay">&#9658;</div>
         </div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $650.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 10-12 personas</li>
-        <li>Muelle Zar par</li>
-      </ul>
-      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
-      <div class="reviews-list hidden mt-2" data-boat="LIA-U"></div>
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 6 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 10 – 12 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Zar par</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20LIA-U" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="lia-u" data-boat-name="LIA-U">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- ROJO -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">ROJO</h2>
+    <section class="catalog-card" data-boat-id="rojo" data-boat-name="ROJO">
+      <div class="card-header">
+        <h2 class="product-title">ROJO</h2>
+        <span class="boat-price">US $550</span>
+      </div>
       <div class="carousel">
-        <img src="img/t-1.jpg" class="active" alt="Imagen 1" />
-        <img src="img/t-2.jpg" alt="Imagen 2" />
-        <img src="img/t-3.jpg" alt="Imagen 3" />
-        <img src="img/t-4.jpg" alt="Imagen 4" />
-        <img src="img/t-5.jpg" alt="Imagen 5" />
+        <img src="img/t-1.jpg" class="active" alt="ROJO" />
+        <img src="img/t-2.jpg" alt="ROJO" />
+        <img src="img/t-3.jpg" alt="ROJO" />
+        <img src="img/t-4.jpg" alt="ROJO" />
+        <img src="img/t-5.jpg" alt="ROJO" />
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $550.00</li>
-        <li>6 Horas de uso</li>
-        <li>Capacidad: 12 personas</li>
-        <li>Muelle Zar par</li>
-      </ul>
-      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
-      <div class="reviews-list hidden mt-2" data-boat="ROJO"></div>
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 6 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 12 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Zar par</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20ROJO" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="rojo" data-boat-name="ROJO">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- IGUAL QUE TU -->
-    <section class="catalog-card text-center flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-      <h2 class="product-title">IGUAL QUE TU</h2>
+    <section class="catalog-card" data-boat-id="igual-que-tu" data-boat-name="IGUAL QUE TU">
+      <div class="card-header">
+        <h2 class="product-title">IGUAL QUE TU</h2>
+        <span class="boat-price">US $800</span>
+      </div>
       <div class="carousel">
-        <img src="img/green.jpg" class="active" alt="Imagen 1" />
-        <img src="img/green6.jpg" alt="Imagen 2" />
-        <img src="img/green1.jpg" alt="Imagen 3" />
-        <img src="img/green2.jpg" alt="Imagen 4" />
-        <img src="img/green3.jpg" alt="Imagen 5" />
-        <img src="img/green4.jpg" alt="Imagen 6" />
-        <img src="img/green5.jpg" alt="Imagen 7" />
-
-       <div class="video-wrapper">
-        <video src="video/green.mp4" controls></video>
-        <div class="play-overlay">&#9658;</div>
-       </div>
-
+        <img src="img/green.jpg" class="active" alt="IGUAL QUE TU" />
+        <img src="img/green6.jpg" alt="IGUAL QUE TU" />
+        <img src="img/green1.jpg" alt="IGUAL QUE TU" />
+        <img src="img/green2.jpg" alt="IGUAL QUE TU" />
+        <img src="img/green3.jpg" alt="IGUAL QUE TU" />
+        <img src="img/green4.jpg" alt="IGUAL QUE TU" />
+        <img src="img/green5.jpg" alt="IGUAL QUE TU" />
+        <div class="video-wrapper">
+          <video src="video/green.mp4"></video>
+          <div class="play-overlay">&#9658;</div>
+        </div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-      <ul class="product-info">
-        <li>Precio: US $800.00</li>
-        <li>5 Horas de uso</li>
-        <li>Capacidad: 18-20 personas</li>
-        <li>Muelle Whala</li>
-      </ul>
-      <button class="toggle-reviews bg-blue-500 text-white px-3 py-1 rounded mt-2">Ver Reseñas</button>
-      <div class="reviews-list hidden mt-2" data-boat="IGUAL QUE TU"></div>
+      <div class="boat-body">
+        <ul class="product-info">
+          <li><span class="info-icon">⏱</span> 5 Horas de uso</li>
+          <li><span class="info-icon">👥</span> 18 – 20 personas</li>
+          <li><span class="info-icon">⚓</span> Muelle Whala</li>
+        </ul>
+        <div class="card-actions">
+          <a href="https://wa.me/8294293012?text=Quiero%20reservar%20IGUAL%20QUE%20TU" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Reservar
+          </a>
+          <button class="toggle-reviews" data-boat-id="igual-que-tu" data-boat-name="IGUAL QUE TU">
+            <i class="far fa-comment"></i> Reseñas <span class="review-count">(0)</span>
+          </button>
+        </div>
+      </div>
     </section>
 
   </div>
 </main>
 
-
-  <footer class="page-footer">
-    <div class="footer-content">
-  
-      <!-- Redes sociales -->
-      <div class="social-links">
-        <p class="social-instruction">Presione el ícono</p>
-        <a href="https://wa.me/8294293012" target="_blank">
-          <img src="icons/whatsapp.png" alt="WhatsApp" />
-        </a>
-      </div>
-  
-      <!-- Incluye y A parte -->
-      <div class="item-details">
-        <div class="included-items">
-          <h3>Incluye:</h3>
-          <ul>
-            <li>4 fundas de hielo</li>
-            <li>1 faldón de agua</li>
-            <li>12 refrescos</li>
-          </ul>
-        </div>
-  
-        <div class="apart-items">
-          <h3>A parte:</h3>
-          <p class="apart-text"> Se hace combo</p>
-          <p class="apart-text">1 hora de Jetski: US $100</p>
-        </div>
-      </div>
-  
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="footer-content">
+    <div class="social-links">
+      <p class="social-instruction">Contáctanos</p>
+      <a href="https://wa.me/8294293012" target="_blank">
+        <img src="icons/whatsapp.png" alt="WhatsApp OceanLux" />
+      </a>
     </div>
-  </footer>
-  
-  <!-- FORMULARIO DE RESEÑAS -->
-<div id="review-page" class="hidden fixed inset-0 bg-[#80f7f7] overflow-y-auto py-12 z-50">
-  <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
-    <div class="p-8">
-      <button onclick="showMainPage()" class="mb-6 text-gray-600 hover:text-[#21c6ba] transition">
-        <i class="fas fa-arrow-left mr-2"></i> Volver
-      </button>
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Deja tu reseña</h2>
-      <p class="text-gray-600 mb-8">Comparte tu experiencia con OceanLux y ayuda a otros clientes a elegir la mejor embarcación.</p>
+    <div class="item-details">
+      <div class="included-items">
+        <h3>Incluye</h3>
+        <ul>
+          <li>4 fundas de hielo</li>
+          <li>1 faldón de agua</li>
+          <li>12 refrescos</li>
+        </ul>
+      </div>
+      <div class="apart-items">
+        <h3>Extras</h3>
+        <p class="apart-text">Se hace combo</p>
+        <p class="apart-text">1 hora de Jetski: US $100</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 OceanLux · Todos los derechos reservados</span>
+    <span>Boca Chica, República Dominicana</span>
+  </div>
+</footer>
 
-      <form id="review-form" class="space-y-6">
-        <div>
-          <label for="boat-select" class="block text-gray-700 font-medium mb-2">Selecciona la embarcación</label>
-          <select id="boat-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
-            <option value="" disabled selected>Elige una opción</option>
-            <option value="COCO-1">COCO-1</option>
-            <option value="SOFI">SOFI</option>
-            <option value="MIA">MIA</option>
-            <option value="LIA-U">LIA-U</option>
-            <option value="ROJO">ROJO</option>
-            <option value="IGUAL QUE TU">IGUAL QUE TU</option>
+<!-- =============================================
+     MODAL 1: FORMULARIO DE RESEÑA
+============================================== -->
+<div id="review-form-modal" class="ol-modal hidden">
+  <div class="ol-modal-backdrop" id="review-form-backdrop"></div>
+  <div class="ol-modal-content ol-modal-sm">
+
+    <div class="ol-modal-header">
+      <div>
+        <h3 class="ol-modal-title">Deja tu reseña</h3>
+        <p class="ol-modal-subtitle">Comparte tu experiencia con OceanLux</p>
+      </div>
+      <button class="ol-modal-close" onclick="closeReviewForm()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Vista formulario -->
+    <div id="rf-form-view" class="ol-modal-body">
+      <form id="review-form">
+
+        <div class="form-group">
+          <label for="rf-boat">Embarcación</label>
+          <select id="rf-boat" required>
+            <option value="" disabled selected>Elige una embarcación</option>
           </select>
         </div>
 
-        <div>
-          <label class="block text-gray-700 font-medium mb-2">Calificación</label>
-          <div class="flex space-x-2" id="star-rating">
-            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="1"></i>
-            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="2"></i>
-            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="3"></i>
-            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="4"></i>
-            <i class="far fa-star text-3xl text-gray-400 cursor-pointer" data-rating="5"></i>
+        <div class="form-group">
+          <label>Calificación</label>
+          <div class="stars-row" id="rf-stars">
+            <i class="far fa-star" data-rating="1"></i>
+            <i class="far fa-star" data-rating="2"></i>
+            <i class="far fa-star" data-rating="3"></i>
+            <i class="far fa-star" data-rating="4"></i>
+            <i class="far fa-star" data-rating="5"></i>
           </div>
-          <input type="hidden" id="rating-value" required>
+          <input type="hidden" id="rf-rating-value">
         </div>
 
-        <div>
-          <label for="review-text" class="block text-gray-700 font-medium mb-2">Tu reseña</label>
-          <textarea id="review-text" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Describe tu experiencia..." required></textarea>
+        <div class="form-group">
+          <label for="rf-name">Tu nombre</label>
+          <input type="text" id="rf-name" placeholder="Nombre" required>
         </div>
 
-        <div>
-          <label for="reviewer-name" class="block text-gray-700 font-medium mb-2">Tu nombre</label>
-          <input type="text" id="reviewer-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Nombre" required>
+        <div class="form-group">
+          <label for="rf-comment">Tu comentario</label>
+          <textarea id="rf-comment" rows="4" placeholder="Describe tu experiencia..." required></textarea>
         </div>
 
-        <button type="submit" class="w-full bg-[#0f8bf9] text-white py-3 rounded-lg font-bold hover:bg-[#d9b800] transition flex items-center justify-center">
-          <i class="fas fa-paper-plane mr-2"></i> Enviar Reseña
+        <p id="rf-error" class="rf-error hidden"></p>
+
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i> Enviar Reseña
         </button>
+
       </form>
     </div>
+
+    <!-- Vista éxito -->
+    <div id="rf-success-view" class="ol-modal-body hidden">
+      <div class="rf-success">
+        <div class="rf-success-icon"><i class="fas fa-check-circle"></i></div>
+        <h3>¡Reseña enviada!</h3>
+        <p>Gracias por compartir tu experiencia con OceanLux.</p>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- ✅ SDKs DE FIREBASE - SIEMPRE VAN ANTES DE TUS SCRIPTS -->
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database-compat.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyDyiV4ify72VG_MKPIzK_0aKQP2qeByasY",
-    authDomain: "oceandelux-aaeab.firebaseapp.com",
-    databaseURL: "https://oceandelux-aaeab-default-rtdb.firebaseio.com",
-    projectId: "oceandelux-aaeab",
-    storageBucket: "oceandelux-aaeab.appspot.com",
-    messagingSenderId: "837708528184",
-    appId: "1:837708528184:web:6b4da1a34fedc986dc84cd",
-    measurementId: "G-07YN71N7NB"
-  };
+<!-- =============================================
+     MODAL 2: VER RESEÑAS POR BOTE
+============================================== -->
+<div id="reviews-view-modal" class="ol-modal hidden">
+  <div class="ol-modal-backdrop" id="reviews-view-backdrop"></div>
+  <div class="ol-modal-content ol-modal-lg">
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
+    <div class="ol-modal-header">
+      <h3 class="ol-modal-title" id="rvm-title">Reseñas</h3>
+      <button class="ol-modal-close" onclick="closeReviewsView()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
 
-<!-- TUS SCRIPTS VAN DESPUÉS DE INICIALIZAR FIREBASE -->
+    <div id="rvm-body" class="ol-modal-body"></div>
+
+  </div>
+</div>
+
 <script src="carousel.js"></script>
 <script src="main.js"></script>
 
-
- 
+</body>
 </html>
-<input type="hidden" id="rating-value" required>
