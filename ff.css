@@ -33,6 +33,17 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Reset de links y botones: evitar estilos por defecto del navegador */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .hidden { display: none !important; }
